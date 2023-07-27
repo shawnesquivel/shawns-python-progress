@@ -1,3 +1,11 @@
+def test(expected, actual):
+    if expected == actual:
+        print("Test Passed")
+    else:
+        print("Test Failed")
+    print(f"Expected: {expected} Actual: {actual}")
+
+
 # Section 3: Data Struture Objects / Basics
 my_string = "Hello World"
 
@@ -24,3 +32,18 @@ print(letters[7:])
 
 # Print abcdefghij
 print(letters[:10])
+
+# Grab a subsection (defg)
+# d = index 3
+# g = index 6
+print(letters[3:7])
+
+
+# Step sizes
+print(letters[::])
+
+binary = "010101"
+
+# go from beginnign to end in step sizes of 1
+test("111", binary[1::2])
+test("11", binary[1:4:2])
