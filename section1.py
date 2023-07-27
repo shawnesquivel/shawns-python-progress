@@ -47,3 +47,7 @@ binary = "010101"
 # go from beginnign to end in step sizes of 1
 test("111", binary[1::2])
 test("11", binary[1:4:2])
+
+# Reversing a string
+# Go from start to end, and use a negative step size
+test("101010", binary[::-1])
