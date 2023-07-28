@@ -51,3 +51,60 @@ test("11", binary[1:4:2])
 # Reversing a string
 # Go from start to end, and use a negative step size
 test("101010", binary[::-1])
+
+
+# 17. STRING PROPERTIES AND METHODS
+# strings are immutable, you can't reassign parts of them
+
+name = "shawn"
+# below results in an error, since strings are objects that point to memory
+# name[0] = "e" #error: string object doesn't support item reassignment
+
+name = name + " esquivel"
+print(name)
+
+# print 300 z's
+print("zzz" * 100)
+
+
+# String Methods
+
+# given a sentence, return the words only
+sentence = "hello world it is a beautiful day my name is shawn"
+all_words = sentence.split()
+split_on_beautiful = sentence.split("beautiful")
+print(all_words)
+print(split_on_beautiful)
+
+
+# format floating point numbers
+unformatted = 123 / 4102
+print(f"{unformatted}")
+
+print(f"3 decimals: {unformatted:.3f}")
+
+large_num = 1000000.12345
+print(f"Large number with two decimals: {large_num:10.2f}")
+
+
+""" LISTS """
+part_one = [2, 10.2, "hello"]
+part_two = ["world", 5]
+# add
+print(part_one[1:] + part_two)
+
+
+# append
+part_one.append("world")
+print(part_one)
+
+part_one.pop()
+print(part_one)
+
+
+numbers = [20, 19, 1, 29, 419, 22]
+numbers.sort()
+print(numbers)
+
+numbers.reverse()
+print(numbers)
